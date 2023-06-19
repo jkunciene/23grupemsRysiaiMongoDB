@@ -13,6 +13,7 @@ const { createNewAuthor,
 
 const {
     createNewCourse,
+    getAllCourses
 } = require('./controllers/CourseController');
 
 app.post('/api/author', createNewAuthor);
@@ -20,6 +21,7 @@ app.get('/api/authors', getAllAuthors);
 app.get('/api/author/:id', getAuthorById);
 
 app.post('/api/course', createNewCourse);
+app.get('/api/courses', getAllCourses);
 
 
 app.listen(process.env.PORT, () => {
